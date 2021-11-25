@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>PointNet</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<h1> PointNet</h1>
+<body>
+    PointNet is a “novel deep net architecture that consumes raw point cloud”, it recognises both local & global features for various 3D recognition tasks. It is one of the first Pointwise MLP methods which is a model that directly consumes point clouds and models each point independently with many shared Multi-layer Perceptrons and then aggregate a global feature using a symmetric aggregation function.
+The authors of PointNet propose 3 main modules in their network architecture to deal with the above properties of point clouds.<br>
+Using symmetric functions to aggregate information from point clouds. Using a multi-layer perceptron (MLP) network, a single variable function and a Max pooling function for aggregation the network is able to deal with the unordered nature of point cloud data. It’s important to use symmetric functions to achieve permutation invariance.
+<br>A local & global information aggregation method to capture point interactions. PointNet feeds the global point cloud feature vector back to per point features by appending the global feature to it. This allows the local feature to be aware of global information.
+<br>Joint alignment network. PointNet applies an affine transformation using a mini-network (T-net) to the input set before feature extraction to get a canonical (ordered) space. A similar transformation is done to the feature space as well, although the transformation matrix in the feature space has very high dimensionality. Hence, a regularization term is used.
+
+</body>

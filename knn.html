@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>PointNet</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<h1> Modified PointNet++</h1>
+<body>
+    We have noted three opportunities in the PointNet++ architecture to make changes. They are presented in the:
+    Set Abstraction layer: 
+    <br>a. Sampling: PointNet++ uses Distance Farthest Point Sampling to sample points for the SA layers, inspired from ECC we have implemented a new Fusion sampling method which also uses feature distance sampling to create a better SA.
+    <br>b. Grouping: PointNet++ groups the points using query ball point method. We have experimented with the k-nearest neighbour algorithm for grouping to see if we can achieve any performance increases.
+    Local & Global information aggregation via Interpolation: The original PointNet++ paper uses interpolation to merge all the features learnt from the set abstraction layers. Interpolation is a very time-consuming and inefficient method, we have tried to improve performance by replicating with nearest neighbours features.    
+</body>
